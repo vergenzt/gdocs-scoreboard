@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Freshman Programming Competition 2013 - Scoreboard</title>
+  </head>
+  <body>
+    <table border=1>
+      <tr>
+        {% for col in columns %}<th>{{col}}</th>{% endfor %}
+      </tr>
+      {% for entry in entries %}
+        <tr> {% for val in entry %} <td>{{val}}</td> {% endfor %} </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
+
