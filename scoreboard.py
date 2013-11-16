@@ -17,9 +17,12 @@ def get_data():
 def scoreboard():
     data = get_data()
     columns = data[0]
-    entries = data[1:]
+    #entries = data[1:]
+
+    entries = filter(lambda e: e[1]!=None, data[1:])
+
     return render_template('scoreboard.html', columns=columns, entries=entries)
 
 if __name__=='__main__':
-    app.run()
+    app.run('0.0.0.0')
 
