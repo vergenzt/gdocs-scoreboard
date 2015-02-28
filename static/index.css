@@ -1,2 +1,11 @@
-
+#scoreboard .rank1 {
+  background-color: #CFB53B;
+}
+#scoreboard .rank2 {
+  background-color: #CCCCCC;
+}
+#scoreboard .rank3 {
+  background-color: #000080;
+  color: white;
+}
 

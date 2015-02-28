@@ -72,7 +72,8 @@ var Entry = React.createClass({
       else
         return <td className={makeSafeForCSS(this.props.columns[j])} key={j}>{data}</td>;
     }.bind(this));
-    return <tr className="entry">{tds}</tr>;
+    var classes = "entry rank" + this.props.entry[0];
+    return <tr className={classes}>{tds}</tr>;
   }
 });
 
