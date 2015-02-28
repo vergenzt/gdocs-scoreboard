@@ -22,7 +22,7 @@ def get_data():
 def scores():
     data = get_data()
     columns = data[0]
-    entries = filter(lambda e: e[2]!=None, data[1:])
+    entries = filter(lambda e: e[2]!=None and e[2]!="", data[1:])
     return jsonify({'columns': columns, 'entries': entries})
 
 @app.route('/')
