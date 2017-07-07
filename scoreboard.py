@@ -3,11 +3,12 @@ app = Flask(__name__, static_url_path='')
 
 import gspread
 import getpass
+import os
 
-email = 'vergenzt@gmail.com'
-password = 'ctqhdojganawaejz'
-spreadsheet_name = 'Scoreboard 2015'
-worksheet_name = 'Scoreboard'
+email = os.environ['GOOGLE_LOGIN']
+password = os.environ['GOOGLE_PASSWORD']
+spreadsheet_name = os.environ['SPREADSHEET_NAME']
+worksheet_name = os.environ['WORKSHEET_NAME']
 
 # Connect to Drive
 account = gspread.login(email, password)
